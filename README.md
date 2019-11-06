@@ -1,2 +1,43 @@
 # intArray
 Code that utilizes an array to calculate the revenue of a store and then format it into a bar graph
+ 
+  1 // Liam Reinhart
+  2 // 5 November 2019
+  3 // code to use arrays for store sales
+  4 
+  5 #include <iostream>
+  6 using namespace std;
+  7 
+  8 int main()
+  9 {
+ 10   // variables
+ 11   int i, s, sales[5], stars [5]; // sales[] and stars[] are parallel arrays
+ 12 
+ 13   // input
+ 14   for (i = 0; i < 5; i++)
+ 15   {
+ 16     cout << "Enter the sales for store #" << i+1 << " : ";
+ 17     cin  >> sales[i];
+ 18   }
+ 19 
+ 20   // processing
+ 21   for (i = 0; i < 5; i++)
+ 22   {
+ 23     stars[i] = sales[i] / 100;
+ 24   }
+ 25 
+ 26   // output
+ 27   for (i = 0; i < 5; i++)
+ 28   {
+ 29     cout << "Store #" << i+1 << " : ";
+ 30     for (s = 0; s < stars[i]; s++)
+ 31     {
+ 32       cout << "* ";
+ 33     }
+ 34     cout << endl;
+ 35   }
+ 36 
+ 37   cout << "Have a nice day!" << endl;
+ 38 
+ 39   return 0;
+ 40 }
